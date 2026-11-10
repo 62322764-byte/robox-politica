@@ -24,7 +24,7 @@
 <main>
 
 <h1>Política de privacidad de ROBO-X</h1>
-<p class="mut">Última actualización: 9 de noviembre de 2026</p>
+<p class="mut">Última actualización: 9 de noviembre de 2026 (versión 2.1.0)</p>
 
 <p>ROBO-X es un asistente para Android que flota sobre tus aplicaciones y te ayuda con voz, notas, calculadora, modo estudio, alarmas, linterna, capturas y grabaciones de pantalla. Esta política explica qué información usa la app, para qué y qué control tienes.</p>
 <p><strong>En resumen:</strong> ROBO-X no te pide crear una cuenta, no muestra anuncios, no usa herramientas de analítica o publicidad y no vende ni comparte tus datos. Casi todo ocurre en tu teléfono. La única información que sale de él es el texto de tus preguntas a la IA y, si usas la voz, el audio que procesa el reconocimiento de voz de Google.</p>
@@ -76,6 +76,11 @@
     <td>Sí, al mismo servidor de IA: la frase que dices o escribes (hasta 500 caracteres), la fecha y hora actuales y las últimas frases de la conversación. Si en la frase dices el nombre de un contacto o el título de un evento, viaja como parte del texto. No se envían tu agenda ni tu lista de contactos.</td>
   </tr>
   <tr>
+    <td><strong>Búsqueda de videos y canciones</strong></td>
+    <td>Cuando pides «pon el video de…» o «pon la canción…», encontrar el video o la canción exactos para abrirlos y reproducirlos.</td>
+    <td>Sí. El texto de la búsqueda (hasta 200 caracteres) se envía a nuestro servidor (Cloudflare), que lo consulta en YouTube (Google) mediante los <strong>servicios de la API de YouTube</strong> y devuelve solo el primer resultado. Nuestro servidor no guarda la búsqueda. No se envía tu nombre ni identificadores del dispositivo. Después, el video se abre en la app de YouTube o YouTube Music, que aplican su propia política.</td>
+  </tr>
+  <tr>
     <td><strong>Calendario</strong> (permiso opcional)</td>
     <td>Leer tus eventos para decirte qué tienes hoy y crear eventos cuando se lo pides.</td>
     <td>No. Se lee y se escribe solo en el calendario de tu teléfono.</td>
@@ -117,6 +122,7 @@
 
 <h2>5. Servidor de IA y terceros</h2>
 <p>Las respuestas de IA se generan así: la app envía el texto de tu pregunta a un servidor de ROBO-X alojado en <strong>Cloudflare Workers</strong>, y este lo reenvía a la <strong>API de Gemini de Google</strong>, que genera la respuesta. El servidor de ROBO-X <strong>no guarda ni registra</strong> tus preguntas ni las respuestas. Google procesa el texto según los <a href="https://ai.google.dev/gemini-api/terms">términos de la API de Gemini</a>; dependiendo del plan de la clave de la API, Google puede conservar el texto y usarlo para mejorar sus productos. <strong>Por eso te recomendamos no escribir datos personales o sensibles en tus preguntas.</strong></p>
+<p><strong>Servicios de la API de YouTube.</strong> Para encontrar el video o la canción que pides («pon el video de…», «pon la canción…»), ROBO-X usa los servicios de la API de YouTube: la app envía el texto de la búsqueda a nuestro servidor y este lo consulta en YouTube y devuelve solo el primer resultado, que la app abre en la app de YouTube o de YouTube Music. Al usar esta función aceptas los <a href="https://www.youtube.com/t/terms">Términos de servicio de YouTube</a>, y Google trata la búsqueda según la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>. Nuestro servidor no guarda tus búsquedas. Si no quieres usar esta función, no pidas videos ni canciones por voz: el resto de ROBO-X funciona igual.</p>
 <p>Cloudflare recibe tus peticiones como proveedor de alojamiento y puede registrar datos técnicos de red (como la dirección IP) con fines de seguridad y funcionamiento, según su <a href="https://www.cloudflare.com/privacypolicy/">política de privacidad</a>. ROBO-X usa tu dirección IP solo para limitar el número de preguntas por minuto y no la almacena.</p>
 <p>Además, la app depende de servicios de tu teléfono con sus propias políticas: el reconocimiento de voz de Google y el motor de texto a voz de Android (para que ROBO-X te responda hablando).</p>
 <p>ROBO-X no incluye SDK de publicidad ni de analítica de terceros, y no vende tus datos ni los comparte con anunciantes.</p>
