@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad de ROBO-X</title>
+<style>
+  :root { --fg:#16182a; --bg:#fff; --mut:#5a5f78; --acc:#1d8fa8; --line:#e3e5ee; --warn:#fff6d6; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#e8eaf6; --bg:#0f1120; --mut:#a2a7c4; --acc:#5fd0e8; --line:#262a44; --warn:#3a3410; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 18px 64px; }
+  h1 { font-size:1.9rem; margin:0 0 4px; }
+  h2 { font-size:1.2rem; margin:2rem 0 .4rem; padding-top:1rem; border-top:1px solid var(--line); }
+  p, li { color:var(--fg); }
+  .mut { color:var(--mut); }
+  a { color:var(--acc); }
+  table { width:100%; border-collapse:collapse; font-size:.95rem; }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--line); }
+  th { color:var(--mut); font-weight:600; }
+  .pendiente { background:var(--warn); padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Política de privacidad de ROBO-X</h1>
+<p class="mut">Última actualización: 9 de noviembre de 2026</p>
+
+<p>ROBO-X es un asistente para Android que flota sobre tus aplicaciones y te ayuda con voz, notas, calculadora, modo estudio, alarmas, linterna, capturas y grabaciones de pantalla. Esta política explica qué información usa la app, para qué y qué control tienes.</p>
+<p><strong>En resumen:</strong> ROBO-X no te pide crear una cuenta, no muestra anuncios, no usa herramientas de analítica o publicidad y no vende ni comparte tus datos. Casi todo ocurre en tu teléfono. La única información que sale de él es el texto de tus preguntas a la IA y, si usas la voz, el audio que procesa el reconocimiento de voz de Google.</p>
+
+<h2>1. Quién es el responsable</h2>
+<p>El responsable del tratamiento es <strong>Kleider Anthony Cerron Soto</strong>. Puedes escribirnos a <a href="mailto:cerronsotokleideranthony@gmail.com">cerronsotokleideranthony@gmail.com</a>.</p>
+
+<h2>2. Qué información usa la app y para qué</h2>
+<table>
+  <tr><th>Información</th><th>Para qué</th><th>¿Sale de tu teléfono?</th></tr>
+  <tr>
+    <td><strong>Notas, horario de clases, ajustes y apariencia</strong></td>
+    <td>Mostrarte tus notas, tu horario y tus preferencias (tema, colores, tamaño del robot, accesos rápidos).</td>
+    <td>No. Se guardan solo en tu teléfono.</td>
+  </tr>
+  <tr>
+    <td><strong>Texto de tus preguntas a la IA</strong></td>
+    <td>Cuando ROBO-X no conoce la respuesta, envía el texto de tu pregunta a su servidor para generar una respuesta.</td>
+    <td>Sí, a <code>robox-serve.robox-serve.workers.dev</code> (Cloudflare) por HTTPS. No se envía tu nombre, tus notas ni identificadores del dispositivo.</td>
+  </tr>
+  <tr>
+    <td><strong>Fotos y videos que añades a una nota</strong></td>
+    <td>Mostrarlos dentro de la nota. Los eliges con el selector de fotos de Android (ROBO-X no solicita acceso a tu galería) y se copian al almacenamiento privado de la app. Los videos pueden pesar hasta 100 MB.</td>
+    <td>No. Nunca se suben a internet y no se incluyen en la copia de seguridad en la nube. Se borran al quitarlos de la nota, al borrar la nota o al desinstalar la app.</td>
+  </tr>
+  <tr>
+    <td><strong>Texto seleccionado y «Traducir pantalla»</strong></td>
+    <td>Explicar, resumir, traducir o corregir un texto que seleccionas en otra app con la opción «ROBO-X», o traducir lo que se ve en tu pantalla desde el menú del robot.</td>
+    <td>Solo el texto (hasta 2000 caracteres) se envía al mismo servidor de IA descrito arriba, y únicamente cuando eliges la acción. En «Traducir pantalla» el texto se reconoce dentro de tu teléfono con ML Kit; la imagen de la pantalla no se guarda ni se envía.</td>
+  </tr>
+  <tr>
+    <td><strong>Voz (micrófono)</strong></td>
+    <td>Entender lo que dices en la pantalla de voz o al dictar una nota.</td>
+    <td>ROBO-X no graba ni guarda audio. El audio lo recibe el servicio de reconocimiento de voz de Google instalado en tu teléfono, que puede enviarlo a sus servidores según su propia política. ROBO-X solo recibe el texto resultante.</td>
+  </tr>
+  <tr>
+    <td><strong>Capturas y grabaciones de pantalla</strong></td>
+    <td>Guardar una imagen o un video de tu pantalla cuando tú lo pides.</td>
+    <td>No. Se guardan en tu galería (<code>Pictures/ROBO-X</code> y <code>Movies/ROBO-X</code>) y nunca se suben a internet.</td>
+  </tr>
+  <tr>
+    <td><strong>Lista de aplicaciones instaladas</strong></td>
+    <td>Mostrarlas en «Mis Apps» y abrirlas por voz.</td>
+    <td>No.</td>
+  </tr>
+</table>
+<p>ROBO-X <strong>no</strong> accede a tus contactos, mensajes, ubicación ni al contenido de otras aplicaciones, y no usa la cámara para tomar fotos o video (la linterna solo enciende el flash).</p>
+
+<h2>3. Reportar respuestas de la IA</h2>
+<p>Bajo cada respuesta generada por la IA hay un botón «Reportar respuesta». Al usarlo eliges un motivo (ofensiva, incorrecta u otro) y se abre tu aplicación de correo con un mensaje ya redactado para <strong>cerronsotokleideranthony@gmail.com</strong> que incluye el motivo, el texto de tu pregunta y la respuesta de la IA. El mensaje solo se envía si tú pulsas «Enviar» y puedes editarlo o borrarlo antes. Usamos esa información únicamente para revisar y mejorar la calidad y seguridad de las respuestas.</p>
+
+<h2>4. Permisos que solicita</h2>
+<ul>
+  <li><strong>Mostrar sobre otras apps:</strong> solo para dibujar el robot flotante y sus paneles. ROBO-X no lee lo que hay en otras aplicaciones.</li>
+  <li><strong>Micrófono:</strong> solo mientras hablas con ROBO-X. Se pide la primera vez que lo usas.</li>
+  <li><strong>Captura de pantalla:</strong> Android te muestra su propio aviso cada vez que ROBO-X va a capturar o grabar. Mientras graba, Android muestra un indicador en la barra de estado.</li>
+  <li><strong>Notificaciones:</strong> para el aviso fijo del robot flotante (con el botón «Apagar robot»), el Pomodoro y el aviso de captura.</li>
+  <li><strong>No molestar:</strong> opcional, solo para el Modo Concentración.</li>
+  <li><strong>Servicio en primer plano:</strong> mantiene el robot flotante activo y realiza capturas y grabaciones. Se detiene al apagar el robot.</li>
+  <li><strong>Inicio del teléfono:</strong> si dejaste el robot encendido, vuelve a mostrarse al reiniciar.</li>
+  <li><strong>Alarmas, vibración y fondo de pantalla:</strong> para crear alarmas en la app Reloj, vibrar y aplicar el fondo de ROBO-X si tú lo eliges.</li>
+  <li><strong>Internet:</strong> para enviar tus preguntas a la IA.</li>
+</ul>
+<p>Puedes revisar o quitar cualquier permiso en <em>Ajustes del sistema › Apps › ROBO-X › Permisos</em>.</p>
+
+<h2>5. Servidor de IA y terceros</h2>
+<p>Las respuestas de IA se generan así: la app envía el texto de tu pregunta a un servidor de ROBO-X alojado en <strong>Cloudflare Workers</strong>, y este lo reenvía a la <strong>API de Gemini de Google</strong>, que genera la respuesta. El servidor de ROBO-X <strong>no guarda ni registra</strong> tus preguntas ni las respuestas. Google procesa el texto según los <a href="https://ai.google.dev/gemini-api/terms">términos de la API de Gemini</a>; dependiendo del plan de la clave de la API, Google puede conservar el texto y usarlo para mejorar sus productos. <strong>Por eso te recomendamos no escribir datos personales o sensibles en tus preguntas.</strong></p>
+<p>Cloudflare recibe tus peticiones como proveedor de alojamiento y puede registrar datos técnicos de red (como la dirección IP) con fines de seguridad y funcionamiento, según su <a href="https://www.cloudflare.com/privacypolicy/">política de privacidad</a>. ROBO-X usa tu dirección IP solo para limitar el número de preguntas por minuto y no la almacena.</p>
+<p>Además, la app depende de servicios de tu teléfono con sus propias políticas: el reconocimiento de voz de Google y el motor de texto a voz de Android (para que ROBO-X te responda hablando).</p>
+<p>ROBO-X no incluye SDK de publicidad ni de analítica de terceros, y no vende tus datos ni los comparte con anunciantes.</p>
+
+<h2>6. Respaldo en la nube</h2>
+<p>Las notas (su texto), el horario y los ajustes pueden incluirse en la copia de seguridad de Google de tu dispositivo, si la tienes activada, y transferirse a un teléfono nuevo. Esa copia la gestiona Google, no ROBO-X. Las fotos y videos de las notas no se respaldan: si restauras la copia en otro teléfono, esas notas conservarán su texto pero no sus archivos adjuntos.</p>
+
+<h2>7. Conservación y tus derechos</h2>
+<p>Los datos locales permanecen en tu teléfono hasta que los borres. Puedes eliminarlos en <em>Ajustes › Apps › ROBO-X › Almacenamiento › Borrar datos</em> o desinstalando la app. Las capturas y grabaciones están en tu galería y las puedes borrar desde ahí.</p>
+<p>Como ROBO-X no tiene cuentas y no asocia las preguntas a tu identidad, no podemos identificar tus consultas anteriores. Si crees que una pregunta tuya con datos personales llegó al servidor y quieres consultarla, rectificarla o que se elimine, escríbenos al correo de la sección 1.</p>
+
+<h2>8. Menores de edad</h2>
+<p>ROBO-X no está dirigido a menores de 13 años y no recopila intencionalmente información de ellos.</p>
+
+<h2>9. Seguridad</h2>
+<p>La comunicación con el servidor usa HTTPS. Los datos locales se guardan en el almacenamiento privado de la app, al que otras aplicaciones no tienen acceso.</p>
+
+<h2>10. Cambios en esta política</h2>
+<p>Si cambiamos esta política, publicaremos la nueva versión en esta misma dirección y actualizaremos la fecha de arriba.</p>
+
+<h2>11. Contacto</h2>
+<p><a href="mailto:cerronsotokleideranthony@gmail.com">cerronsotokleideranthony@gmail.com</a></p>
+
+</main>
+</body>
+</html>
