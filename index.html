@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Política de privacidad de ROBO-X</title>
+<title>Política de privacidad de Robot-X</title>
 <style>
   :root { --fg:#16182a; --bg:#fff; --mut:#5a5f78; --acc:#1d8fa8; --line:#e3e5ee; --warn:#fff6d6; }
   @media (prefers-color-scheme: dark) { :root { --fg:#e8eaf6; --bg:#0f1120; --mut:#a2a7c4; --acc:#5fd0e8; --line:#262a44; --warn:#3a3410; } }
@@ -23,11 +23,11 @@
 <body>
 <main>
 
-<h1>Política de privacidad de ROBO-X</h1>
-<p class="mut">Última actualización: 11 de noviembre de 2026 (versión 2.2.0)</p>
+<h1>Política de privacidad de Robot-X</h1>
+<p class="mut">Última actualización: 17 de noviembre de 2026 (versión 2.3.0)</p>
 
-<p>ROBO-X es un asistente para Android que flota sobre tus aplicaciones y te ayuda con voz, notas, calculadora, modo estudio, alarmas, linterna, capturas y grabaciones de pantalla. Esta política explica qué información usa la app, para qué y qué control tienes.</p>
-<p><strong>En resumen:</strong> ROBO-X no te pide crear una cuenta, no muestra anuncios, no usa herramientas de analítica o publicidad y no vende ni comparte tus datos. Casi todo ocurre en tu teléfono. La única información que sale de él es el texto de tus preguntas a la IA y, si usas la voz, el audio que procesa el reconocimiento de voz de Google.</p>
+<p>Robot-X (antes ROBO-X) es un asistente para Android que flota sobre tus aplicaciones y te ayuda con voz, notas, calculadora, modo estudio, finanzas, agenda, alarmas, linterna, capturas y grabaciones de pantalla. Esta política explica qué información usa la app, para qué, qué sale de tu teléfono y qué control tienes.</p>
+<p><strong>En resumen:</strong> Robot-X no te pide crear una cuenta, no muestra anuncios, no usa herramientas de analítica o publicidad y no vende ni comparte tus datos. Casi todo ocurre en tu teléfono. Solo sale de él lo necesario para la función que tú pides: el texto de tus preguntas y órdenes a la IA, y únicamente cuando lo pides expresamente, la imagen de tu pantalla («qué ves»), el texto de un correo o mensaje que quieres resumir o responder, o tus notas al buscarlas por significado. Si usas la voz, el audio lo procesa el reconocimiento de voz de Google.</p>
 
 <h2>1. Quién es el responsable</h2>
 <p>El responsable del tratamiento es <strong>Kleider Anthony Cerron Soto</strong>. Puedes escribirnos a <a href="mailto:cerronsotokleideranthony@gmail.com">cerronsotokleideranthony@gmail.com</a>.</p>
@@ -36,29 +36,64 @@
 <table>
   <tr><th>Información</th><th>Para qué</th><th>¿Sale de tu teléfono?</th></tr>
   <tr>
-    <td><strong>Notas, horario de clases, ajustes y apariencia</strong></td>
-    <td>Mostrarte tus notas, tu horario y tus preferencias (tema, colores, tamaño del robot, accesos rápidos).</td>
-    <td>No. Se guardan solo en tu teléfono.</td>
+    <td><strong>Notas, horario de clases, gastos, exámenes, tareas, cursos, ajustes y apariencia</strong></td>
+    <td>Mostrarte tus datos en «Mis Datos», responderte sobre ellos por voz («¿cuánto gasté esta semana?», «¿qué tengo mañana?») y recordar tus preferencias.</td>
+    <td>No. Se guardan solo en tu teléfono (salvo lo que tú pidas enviar a la IA, ver «Buscar en tus notas»).</td>
   </tr>
   <tr>
-    <td><strong>Texto de tus preguntas a la IA</strong></td>
-    <td>Cuando ROBO-X no conoce la respuesta, envía el texto de tu pregunta a su servidor para generar una respuesta.</td>
-    <td>Sí, a <code>robox-serve.robox-serve.workers.dev</code> (Cloudflare) por HTTPS. No se envía tu nombre, tus notas ni identificadores del dispositivo.</td>
+    <td><strong>Órdenes y preguntas a la IA</strong> (voz o texto)</td>
+    <td>Entender qué quieres hacer (abrir una app, poner una alarma, crear una nota o un evento, llamar, etc.) y ejecutarlo, o responder tu pregunta.</td>
+    <td>Sí, a <code>robox-serve.robox-serve.workers.dev</code> (Cloudflare) por HTTPS: la frase que dices o escribes (hasta 500 caracteres), la fecha y hora actuales y las últimas frases de la conversación (lo que dijiste y lo que respondió Robot-X, hasta 6 turnos). Si en la frase dices el nombre de un contacto o el título de un evento, o si Robot-X acaba de leerte un dato tuyo, viaja como parte de esa conversación. No se envían tu nombre, tu lista de contactos ni identificadores del dispositivo.</td>
   </tr>
   <tr>
-    <td><strong>Fotos y videos que añades a una nota</strong></td>
-    <td>Mostrarlos dentro de la nota. Los eliges con el selector de fotos de Android (ROBO-X no solicita acceso a tu galería) y se copian al almacenamiento privado de la app. Los videos pueden pesar hasta 100 MB.</td>
-    <td>No. Nunca se suben a internet y no se incluyen en la copia de seguridad en la nube. Se borran al quitarlos de la nota, al borrar la nota o al desinstalar la app.</td>
+    <td><strong>Buscar en tus notas por significado</strong></td>
+    <td>Cuando pides «busca en mis notas…» y la búsqueda por palabras en el teléfono no encuentra nada, encontrar la nota por lo que significa.</td>
+    <td>Sí, solo en ese caso: el texto de tus 40 notas más recientes (recortado) se envía al servidor de IA para elegir la que buscas. Las fotos y videos de las notas nunca se envían.</td>
+  </tr>
+  <tr>
+    <td><strong>Notificaciones</strong> (acceso a notificaciones, opcional; lo activas tú en Ajustes)</td>
+    <td>Leerte en voz alta tus notificaciones, mensajes de WhatsApp, SMS y correos de Gmail cuando se lo pides, avisarte de llamadas entrantes y correos importantes, y el modo conducción (lee los mensajes que llegan mientras conduces).</td>
+    <td>Se leen dentro del teléfono y Robot-X conserva solo las 40 más recientes en memoria, sin guardarlas en archivos. <strong>Solo si pides resumir o responder un correo o un mensaje</strong>, el remitente y el texto de esa notificación (con tu indicación) se envían al servidor de IA para redactar el resumen o la respuesta. Robot-X no envía mensajes por su cuenta, con una excepción que tú activas: en el <strong>modo conducción</strong> responde una sola vez a cada chat individual de WhatsApp con un mensaje fijo (que estás conduciendo), usando la respuesta rápida de la propia notificación. El modo se apaga cuando lo pides o solo, pasado un tiempo.</td>
+  </tr>
+  <tr>
+    <td><strong>Imagen de la pantalla: «qué ves», «lee esto», «traduce esto»</strong></td>
+    <td>Describir lo que hay en tu pantalla, leerte su texto o traducirlo, solo cuando lo pides.</td>
+    <td>«Lee esto» y «traduce esto»: el texto se reconoce dentro del teléfono con ML Kit de Google, y para traducirlo solo se envía ese texto al servidor de IA. <strong>«Qué ves»: la imagen de la pantalla</strong> (JPEG reducido) se envía al servidor de IA, que la describe con Groq o, como respaldo, con Gemini. La imagen no se guarda ni en el teléfono ni en el servidor. Antes de pedirlo, asegúrate de que no haya información sensible a la vista.</td>
   </tr>
   <tr>
     <td><strong>Texto seleccionado y «Traducir pantalla»</strong></td>
-    <td>Explicar, resumir, traducir o corregir un texto que seleccionas en otra app con la opción «ROBO-X», o traducir lo que se ve en tu pantalla desde el menú del robot.</td>
-    <td>Solo el texto (hasta 2000 caracteres) se envía al mismo servidor de IA descrito arriba, y únicamente cuando eliges la acción. En «Traducir pantalla» el texto se reconoce dentro de tu teléfono con ML Kit; la imagen de la pantalla no se guarda ni se envía.</td>
+    <td>Explicar, resumir, traducir o corregir un texto que seleccionas en otra app con la opción «Robot-X», o traducir lo que se ve en tu pantalla desde el menú del robot.</td>
+    <td>Solo el texto (hasta 2000 caracteres) se envía al servidor de IA, y únicamente cuando eliges la acción.</td>
+  </tr>
+  <tr>
+    <td><strong>Ubicación aproximada</strong> (permiso opcional)</td>
+    <td>Decirte el clima donde estás cuando lo pides («¿cómo está el clima?») y en el resumen diario.</td>
+    <td>Solo se usa la ubicación <strong>aproximada</strong>. Las coordenadas, redondeadas a unos 1 km, se envían a <strong>Open-Meteo</strong> (servicio meteorológico público) para obtener el pronóstico; si dices una ciudad, se envía solo su nombre. La última ubicación aproximada se guarda en tu teléfono para el resumen diario. No se envía a nuestro servidor ni se usa para nada más.</td>
   </tr>
   <tr>
     <td><strong>Voz (micrófono)</strong></td>
-    <td>Entender lo que dices en la pantalla de voz o al dictar una nota.</td>
-    <td>ROBO-X no graba ni guarda audio. El audio lo recibe el servicio de reconocimiento de voz de Google instalado en tu teléfono, que puede enviarlo a sus servidores según su propia política. ROBO-X solo recibe el texto resultante.</td>
+    <td>Entender lo que dices al hablar con Robot-X o al dictar una nota.</td>
+    <td>Robot-X no graba ni guarda audio. El audio lo recibe el servicio de reconocimiento de voz de Google instalado en tu teléfono, que puede enviarlo a sus servidores según su propia política. Robot-X solo recibe el texto resultante.</td>
+  </tr>
+  <tr>
+    <td><strong>Palabra de activación (micrófono, opcional)</strong></td>
+    <td>Empezar a hablar con Robot-X cuando dices su nombre («Robot-X» o el que tú elijas), sin tocar nada. Viene apagada: solo funciona si la enciendes en la pestaña Robot, después de un aviso que lo explica. Si activas «Activar con pantalla apagada», también escucha con la pantalla apagada y, al oír su nombre, enciende la pantalla y aparece sobre la pantalla de bloqueo <strong>sin desbloquear el teléfono</strong>.</td>
+    <td>No. Mientras está encendida, Robot-X mantiene el micrófono abierto (con una notificación fija) y analiza el audio <strong>dentro de tu teléfono y sin internet</strong> con el reconocedor de código abierto Vosk. Con la pantalla apagada solo mide el volumen y analiza cuando hay sonido. El audio no se graba, no se guarda y no se envía a ningún servidor.</td>
+  </tr>
+  <tr>
+    <td><strong>Voz de las respuestas («Voz JARVIS»)</strong></td>
+    <td>Decir las respuestas con una voz más natural. Sin tu propia clave de ElevenLabs, sin internet o si la apagas en la pestaña Robot, habla la voz de tu teléfono (o una voz descargada) y no se envía nada.</td>
+    <td>Solo si pones <strong>tu propia clave de ElevenLabs</strong>: el texto que Robot-X va a decir (puede incluir datos tuyos si le pides leer una nota o tu agenda) se envía <strong>directamente desde tu teléfono a ElevenLabs</strong>, con tu cuenta, para convertirlo en audio. No pasa por nuestro servidor. Tu clave se guarda cifrada en el teléfono con el Android Keystore y no se envía a nadie más.</td>
+  </tr>
+  <tr>
+    <td><strong>Voces sin internet descargables</strong> (opcional)</td>
+    <td>Elegir otra voz para hablar sin internet.</td>
+    <td>Solo se descarga el archivo de la voz desde GitHub cuando lo eliges; no se envía información tuya. Después funciona sin internet.</td>
+  </tr>
+  <tr>
+    <td><strong>Costumbres de uso</strong></td>
+    <td>Sugerencias como «¿qué debería hacer ahora?» y el resumen diario.</td>
+    <td>No. Robot-X guarda en el teléfono qué tipo de función usaste y cuándo (por ejemplo «clima» a las 7:00), sin el contenido de lo que dijiste, hasta los últimos 1500 usos.</td>
   </tr>
   <tr>
     <td><strong>Capturas y grabaciones de pantalla</strong></td>
@@ -66,84 +101,95 @@
     <td>No. Se guardan en tu galería (<code>Pictures/ROBO-X</code> y <code>Movies/ROBO-X</code>) y nunca se suben a internet.</td>
   </tr>
   <tr>
+    <td><strong>Copia de seguridad en Descargas</strong></td>
+    <td>Exportar e importar tus notas, gastos, horario, exámenes, tareas y cursos (Más › Copia de seguridad).</td>
+    <td>No se sube a internet: se guarda como archivo <code>RobotX_backup_….json</code> en la carpeta Descargas de tu teléfono, sin cifrar. Otras apps con acceso a tus archivos pueden leerlo; compártelo o bórralo según te convenga. Las fotos de las notas no se incluyen.</td>
+  </tr>
+  <tr>
     <td><strong>Lista de aplicaciones instaladas</strong></td>
     <td>Mostrarlas en «Mis Apps» y abrirlas por voz.</td>
     <td>No.</td>
   </tr>
   <tr>
-    <td><strong>Apps favoritas y barra lateral</strong></td>
-    <td>Mostrar tus apps favoritas como iconos en una barra pegada al borde de la pantalla y abrirlas con un toque, o en una ventana flotante con toque largo.</td>
-    <td>No. La lista de favoritas y la posición de la barra se guardan solo en tu teléfono. ROBO-X no lee lo que hay dentro de las apps que abre.</td>
-  </tr>
-  <tr>
-    <td><strong>Órdenes por voz o texto a la IA</strong></td>
-    <td>Entender qué quieres hacer (abrir una app, poner una alarma, crear una nota o un evento, llamar, etc.) y ejecutarlo en tu teléfono.</td>
-    <td>Sí, al mismo servidor de IA: la frase que dices o escribes (hasta 500 caracteres), la fecha y hora actuales y las últimas frases de la conversación. Si en la frase dices el nombre de un contacto o el título de un evento, viaja como parte del texto. No se envían tu agenda ni tu lista de contactos.</td>
+    <td><strong>Apps favoritas, barra lateral y widget</strong></td>
+    <td>Abrir tus apps favoritas desde una barra en el borde de la pantalla, y ver el estado del robot con un botón «Hablar» en el widget de la pantalla de inicio.</td>
+    <td>No. Robot-X no lee lo que hay dentro de las apps que abre.</td>
   </tr>
   <tr>
     <td><strong>Búsqueda de videos y canciones</strong></td>
     <td>Cuando pides «pon el video de…» o «pon la canción…», encontrar el video o la canción exactos para abrirlos y reproducirlos.</td>
-    <td>Sí. El texto de la búsqueda (hasta 200 caracteres) se envía a nuestro servidor (Cloudflare), que lo consulta en YouTube (Google) mediante los <strong>servicios de la API de YouTube</strong> y devuelve solo el primer resultado. Nuestro servidor no guarda la búsqueda. No se envía tu nombre ni identificadores del dispositivo. Después, el video se abre en la app de YouTube o YouTube Music, que aplican su propia política.</td>
+    <td>Sí. El texto de la búsqueda (hasta 200 caracteres) se envía a nuestro servidor (Cloudflare), que lo consulta en YouTube (Google) mediante los <strong>servicios de la API de YouTube</strong> y devuelve solo el primer resultado. Nuestro servidor no guarda la búsqueda. Después, el video se abre en la app de YouTube o YouTube Music, que aplican su propia política.</td>
   </tr>
   <tr>
     <td><strong>Calendario</strong> (permiso opcional)</td>
-    <td>Leer tus eventos para decirte qué tienes hoy y crear eventos cuando se lo pides.</td>
-    <td>No. Se lee y se escribe solo en el calendario de tu teléfono.</td>
+    <td>Leer tus eventos para decirte qué tienes y crear eventos cuando se lo pides.</td>
+    <td>Se leen y se escriben solo en el calendario de tu teléfono. Si preguntas por tu agenda, Robot-X te la lee y esa respuesta puede formar parte de las últimas frases de la conversación que acompañan a tu siguiente orden a la IA.</td>
   </tr>
   <tr>
     <td><strong>Contactos y llamadas</strong> (permisos opcionales)</td>
     <td>Buscar el número de la persona que nombras («llama a mamá») y marcarlo cuando tú lo pides.</td>
-    <td>No. La búsqueda ocurre en tu teléfono; ROBO-X no copia ni guarda tus contactos.</td>
+    <td>No. La búsqueda ocurre en tu teléfono; Robot-X no copia ni guarda tus contactos.</td>
   </tr>
   <tr>
-    <td><strong>Alarmas, temporizadores y avisos</strong></td>
-    <td>Hacer sonar una alarma, un temporizador o el aviso hablado de un evento a su hora, aunque la app esté cerrada.</td>
+    <td><strong>Alarmas, temporizadores, recordatorios y avisos</strong></td>
+    <td>Hacer sonar una alarma, un temporizador o un aviso hablado (eventos, exámenes, recordatorios) a su hora, aunque la app esté cerrada.</td>
     <td>No. Se programan con el reloj del sistema.</td>
   </tr>
   <tr>
     <td><strong>Servicio de accesibilidad</strong> (opcional, lo activas tú en Ajustes)</td>
-    <td>Solo para tomar la captura de pantalla cuando lo pides, sin el aviso de grabación. No lee el contenido de la pantalla ni escribe en otras apps.</td>
-    <td>No. La imagen se guarda en tu galería y nunca se sube.</td>
+    <td>Solo para tomar una imagen de la pantalla cuando lo pides: guardar una captura sin el aviso de grabación, o «qué ves», «lee esto» y «traduce esto».</td>
+    <td>El servicio no lee el contenido de las ventanas ni escribe o toca nada en otras apps: solo toma la imagen en ese momento. Las capturas se guardan en tu galería; para «qué ves», la imagen se envía al servidor de IA como se explica arriba.</td>
   </tr>
 </table>
-<p>ROBO-X <strong>no</strong> lee tus mensajes, no usa tu ubicación, no lee el contenido de otras aplicaciones y no usa la cámara para tomar fotos o video (la linterna solo enciende el flash). Accede a tus contactos y a tu calendario solo si concedes esos permisos y solo para lo que pides.</p>
+<p>Robot-X <strong>no</strong> usa la cámara para tomar fotos o video (la linterna solo enciende el flash), no usa tu ubicación precisa y no lee el contenido de otras aplicaciones más allá de la imagen de pantalla que pides. Accede a tus notificaciones, contactos, calendario y ubicación aproximada solo si concedes esos permisos y solo para lo que pides.</p>
 
 <h2>3. Reportar respuestas de la IA</h2>
 <p>Bajo cada respuesta generada por la IA hay un botón «Reportar respuesta». Al usarlo eliges un motivo (ofensiva, incorrecta u otro) y se abre tu aplicación de correo con un mensaje ya redactado para <strong>cerronsotokleideranthony@gmail.com</strong> que incluye el motivo, el texto de tu pregunta y la respuesta de la IA. El mensaje solo se envía si tú pulsas «Enviar» y puedes editarlo o borrarlo antes. Usamos esa información únicamente para revisar y mejorar la calidad y seguridad de las respuestas.</p>
 
 <h2>4. Permisos que solicita</h2>
 <ul>
-  <li><strong>Mostrar sobre otras apps:</strong> solo para dibujar el robot flotante, su barra lateral de favoritas y sus paneles. Algunas apps (por ejemplo, las bancarias) piden a Android ocultar estos elementos y entonces no se ven. ROBO-X no lee lo que hay en otras aplicaciones.</li>
-  <li><strong>Micrófono:</strong> solo mientras hablas con ROBO-X. Se pide la primera vez que lo usas.</li>
-  <li><strong>Captura de pantalla:</strong> Android te muestra su propio aviso cada vez que ROBO-X va a capturar o grabar. Mientras graba, Android muestra un indicador en la barra de estado.</li>
-  <li><strong>Notificaciones:</strong> para el aviso fijo del robot flotante (con el botón «Apagar robot»), el Pomodoro y el aviso de captura.</li>
-  <li><strong>No molestar:</strong> opcional, solo para el Modo Concentración.</li>
-  <li><strong>Servicio en primer plano:</strong> mantiene el robot flotante activo y realiza capturas y grabaciones. Se detiene al apagar el robot.</li>
-  <li><strong>Inicio del teléfono:</strong> si dejaste el robot encendido, vuelve a mostrarse al reiniciar.</li>
-  <li><strong>Alarmas, vibración y fondo de pantalla:</strong> para crear alarmas en la app Reloj, vibrar y aplicar el fondo de ROBO-X si tú lo eliges.</li>
-  <li><strong>Internet:</strong> para enviar tus preguntas a la IA.</li>
+  <li><strong>Mostrar sobre otras apps:</strong> para dibujar el robot flotante, su barra lateral de favoritas y sus paneles, y para poder abrir la voz desde segundo plano. Algunas apps (por ejemplo, las bancarias) piden a Android ocultar estos elementos y entonces no se ven.</li>
+  <li><strong>Micrófono:</strong> mientras hablas con Robot-X y, solo si la enciendes, para detectar la palabra de activación dentro del teléfono (también con la pantalla apagada, si lo eliges).</li>
+  <li><strong>Acceso a notificaciones</strong> (opcional): para leerte tus notificaciones y mensajes cuando lo pides, los avisos de llamadas y correos y el modo conducción.</li>
+  <li><strong>Servicio de accesibilidad</strong> (opcional): solo para tomar la imagen de la pantalla cuando lo pides. Antes de activarlo, la app te explica para qué sirve.</li>
+  <li><strong>Ubicación aproximada</strong> (opcional): solo para el clima.</li>
+  <li><strong>Contactos y llamadas</strong> (opcionales): para llamar o escribir a quien nombras.</li>
+  <li><strong>Calendario</strong> (opcional): para leer y crear eventos.</li>
+  <li><strong>Captura de pantalla:</strong> Android te muestra su propio aviso cuando Robot-X va a grabar la pantalla y un indicador mientras graba.</li>
+  <li><strong>Notificaciones:</strong> para el aviso fijo del robot y de la escucha (con los botones «Hablar» y «Apagar»), alarmas, recordatorios, el Pomodoro y el aviso de captura.</li>
+  <li><strong>No molestar</strong> (opcional): solo para el Modo Concentración y las rutinas.</li>
+  <li><strong>Servicio en primer plano y mantener la pantalla/CPU activas:</strong> mantienen el robot flotante, realizan capturas y grabaciones, dicen avisos a su hora y, si la enciendes, escuchan la palabra de activación; al oírla con la pantalla apagada, la encienden. Se detienen al apagar el robot o la escucha.</li>
+  <li><strong>Mostrar en pantalla de bloqueo y ventanas en segundo plano</strong> (en teléfonos Xiaomi, opcionales): para aparecer sobre la pantalla de bloqueo al oír la palabra de activación con la pantalla apagada.</li>
+  <li><strong>Alarmas exactas:</strong> para que alarmas, temporizadores y recordatorios suenen a la hora exacta.</li>
+  <li><strong>Modificar ajustes del sistema</strong> (opcional): solo para cambiar el brillo cuando lo pides por voz. Robot-X no cambia ningún otro ajuste.</li>
+  <li><strong>Inicio del teléfono:</strong> si dejaste el robot encendido, vuelve a mostrarse al reiniciar, y se reprograman alarmas y avisos.</li>
+  <li><strong>Vibración, audio, Wi-Fi y fondo de pantalla:</strong> vibrar al oír la palabra de activación, aplicar efectos a la voz, avisarte al conectarte a una red Wi-Fi nueva y aplicar el fondo de Robot-X si tú lo eliges.</li>
+  <li><strong>Internet:</strong> para la IA, buscar videos y canciones, el clima, la voz de ElevenLabs con tu clave y descargar voces.</li>
 </ul>
-<p>Puedes revisar o quitar cualquier permiso en <em>Ajustes del sistema › Apps › ROBO-X › Permisos</em>.</p>
+<p>Puedes revisar o quitar cualquier permiso en <em>Ajustes del sistema › Apps › Robot-X › Permisos</em>, o desde la app en <em>Más › Permisos necesarios</em>.</p>
 
 <h2>5. Servidor de IA y terceros</h2>
-<p>Las respuestas de IA se generan así: la app envía el texto de tu pregunta a un servidor de ROBO-X alojado en <strong>Cloudflare Workers</strong>, y este lo reenvía a la <strong>API de Gemini de Google</strong>, que genera la respuesta. El servidor de ROBO-X <strong>no guarda ni registra</strong> tus preguntas ni las respuestas. Google procesa el texto según los <a href="https://ai.google.dev/gemini-api/terms">términos de la API de Gemini</a>; dependiendo del plan de la clave de la API, Google puede conservar el texto y usarlo para mejorar sus productos. <strong>Por eso te recomendamos no escribir datos personales o sensibles en tus preguntas.</strong></p>
-<p><strong>Servicios de la API de YouTube.</strong> Para encontrar el video o la canción que pides («pon el video de…», «pon la canción…»), ROBO-X usa los servicios de la API de YouTube: la app envía el texto de la búsqueda a nuestro servidor y este lo consulta en YouTube y devuelve solo el primer resultado, que la app abre en la app de YouTube o de YouTube Music. Al usar esta función aceptas los <a href="https://www.youtube.com/t/terms">Términos de servicio de YouTube</a>, y Google trata la búsqueda según la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>. Nuestro servidor no guarda tus búsquedas. Si no quieres usar esta función, no pidas videos ni canciones por voz: el resto de ROBO-X funciona igual.</p>
-<p>Cloudflare recibe tus peticiones como proveedor de alojamiento y puede registrar datos técnicos de red (como la dirección IP) con fines de seguridad y funcionamiento, según su <a href="https://www.cloudflare.com/privacypolicy/">política de privacidad</a>. ROBO-X usa tu dirección IP solo para limitar el número de preguntas por minuto y no la almacena.</p>
-<p>Además, la app depende de servicios de tu teléfono con sus propias políticas: el reconocimiento de voz de Google y el motor de texto a voz de Android (para que ROBO-X te responda hablando).</p>
-<p>ROBO-X no incluye SDK de publicidad ni de analítica de terceros, y no vende tus datos ni los comparte con anunciantes.</p>
+<p>Las respuestas de IA se generan así: la app envía tu petición a un servidor de Robot-X alojado en <strong>Cloudflare Workers</strong>, y este la reenvía a la <strong>API de Groq</strong> o, como respaldo, a la <strong>API de Gemini de Google</strong>, que generan la respuesta (o describen la imagen en «qué ves»). El servidor de Robot-X <strong>no guarda ni registra</strong> tus preguntas, imágenes ni respuestas. Groq procesa los datos según su <a href="https://groq.com/privacy-policy/">política de privacidad</a> y Google según los <a href="https://ai.google.dev/gemini-api/terms">términos de la API de Gemini</a>; dependiendo del plan de la clave de la API, Google puede conservar los datos y usarlos para mejorar sus productos. <strong>Por eso te recomendamos no incluir datos personales o sensibles en tus preguntas ni tener información sensible a la vista al pedir «qué ves».</strong></p>
+<p><strong>ElevenLabs.</strong> Si pones tu propia clave de ElevenLabs para la «Voz JARVIS», tu teléfono envía directamente a ElevenLabs el texto que Robot-X va a decir, bajo tu cuenta y según su <a href="https://elevenlabs.io/privacy-policy">política de privacidad</a>.</p>
+<p><strong>Open-Meteo.</strong> Para el clima, tu teléfono envía a Open-Meteo las coordenadas aproximadas o el nombre de la ciudad, según su <a href="https://open-meteo.com/en/terms">política</a>.</p>
+<p><strong>Servicios de la API de YouTube.</strong> Para encontrar el video o la canción que pides, Robot-X usa los servicios de la API de YouTube: la app envía el texto de la búsqueda a nuestro servidor y este lo consulta en YouTube y devuelve solo el primer resultado, que la app abre en la app de YouTube o de YouTube Music. Al usar esta función aceptas los <a href="https://www.youtube.com/t/terms">Términos de servicio de YouTube</a>, y Google trata la búsqueda según la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>. Nuestro servidor no guarda tus búsquedas. Si no quieres usar esta función, no pidas videos ni canciones por voz: el resto de Robot-X funciona igual.</p>
+<p>Cloudflare recibe tus peticiones como proveedor de alojamiento y puede registrar datos técnicos de red (como la dirección IP) con fines de seguridad y funcionamiento, según su <a href="https://www.cloudflare.com/privacypolicy/">política de privacidad</a>. Robot-X usa tu dirección IP solo para limitar el número de peticiones por minuto y no la almacena.</p>
+<p>Además, la app depende de servicios de tu teléfono con sus propias políticas: el reconocimiento de voz de Google, el motor de texto a voz de Android y ML Kit de Google (reconocimiento de texto dentro del teléfono).</p>
+<p>Robot-X no incluye SDK de publicidad ni de analítica de terceros, y no vende tus datos ni los comparte con anunciantes.</p>
 
-<h2>6. Respaldo en la nube</h2>
-<p>Las notas (su texto), el horario y los ajustes pueden incluirse en la copia de seguridad de Google de tu dispositivo, si la tienes activada, y transferirse a un teléfono nuevo. Esa copia la gestiona Google, no ROBO-X. Las fotos y videos de las notas no se respaldan: si restauras la copia en otro teléfono, esas notas conservarán su texto pero no sus archivos adjuntos.</p>
+<h2>6. Copias de seguridad</h2>
+<p><strong>Copia de Google.</strong> Tus notas (su texto), horario, gastos, exámenes, tareas, cursos, costumbres de uso y ajustes pueden incluirse en la copia de seguridad de Google de tu dispositivo, si la tienes activada, y transferirse a un teléfono nuevo. Esa copia la gestiona Google, no Robot-X. Tu clave de ElevenLabs no se puede usar en otro teléfono (su cifrado depende de este dispositivo) y tendrás que ponerla de nuevo. Las fotos y videos de las notas no se respaldan.</p>
+<p><strong>Copia en Descargas.</strong> Si usas <em>Más › Copia de seguridad</em>, el archivo queda en la carpeta Descargas de tu teléfono como se explica en la sección 2. Robot-X no lo sube a ningún sitio.</p>
 
 <h2>7. Conservación y tus derechos</h2>
-<p>Los datos locales permanecen en tu teléfono hasta que los borres. Puedes eliminarlos en <em>Ajustes › Apps › ROBO-X › Almacenamiento › Borrar datos</em> o desinstalando la app. Las capturas y grabaciones están en tu galería y las puedes borrar desde ahí.</p>
-<p>Como ROBO-X no tiene cuentas y no asocia las preguntas a tu identidad, no podemos identificar tus consultas anteriores. Si crees que una pregunta tuya con datos personales llegó al servidor y quieres consultarla, rectificarla o que se elimine, escríbenos al correo de la sección 1.</p>
+<p>Los datos locales permanecen en tu teléfono hasta que los borres. Puedes eliminarlos desde la app (en cada sección de «Mis Datos»), en <em>Ajustes › Apps › Robot-X › Almacenamiento › Borrar datos</em> o desinstalando la app. Las capturas, grabaciones y copias en Descargas están en tus archivos y las puedes borrar desde ahí.</p>
+<p>Como Robot-X no tiene cuentas y no asocia las peticiones a tu identidad, no podemos identificar tus consultas anteriores. Si crees que una petición tuya con datos personales llegó al servidor y quieres consultarla, rectificarla o que se elimine, escríbenos al correo de la sección 1.</p>
 
 <h2>8. Menores de edad</h2>
-<p>ROBO-X no está dirigido a menores de 13 años y no recopila intencionalmente información de ellos.</p>
+<p>Robot-X no está dirigido a menores de 13 años y no recopila intencionalmente información de ellos.</p>
 
 <h2>9. Seguridad</h2>
-<p>La comunicación con el servidor usa HTTPS. Los datos locales se guardan en el almacenamiento privado de la app, al que otras aplicaciones no tienen acceso.</p>
+<p>La comunicación con el servidor y con los servicios de terceros usa HTTPS. Los datos locales se guardan en el almacenamiento privado de la app, al que otras aplicaciones no tienen acceso (salvo los archivos que tú guardas en la galería o en Descargas). Tu clave de ElevenLabs se guarda cifrada con el Android Keystore.</p>
 
 <h2>10. Cambios en esta política</h2>
 <p>Si cambiamos esta política, publicaremos la nueva versión en esta misma dirección y actualizaremos la fecha de arriba.</p>
