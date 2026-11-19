@@ -24,10 +24,10 @@
 <main>
 
 <h1>Política de privacidad de Robot-X</h1>
-<p class="mut">Última actualización: 18 de noviembre de 2026 (versión 2.3.1)</p>
+<p class="mut">Última actualización: 19 de noviembre de 2026 (versión 2.3.4)</p>
 
 <p>Robot-X (antes ROBO-X) es un asistente para Android que flota sobre tus aplicaciones y te ayuda con voz, notas, calculadora, modo estudio, finanzas, agenda, alarmas, linterna, capturas y grabaciones de pantalla. Esta política explica qué información usa la app, para qué, qué sale de tu teléfono y qué control tienes.</p>
-<p><strong>En resumen:</strong> Robot-X no te pide crear una cuenta, no muestra anuncios, no usa herramientas de analítica o publicidad y no vende ni comparte tus datos. Casi todo ocurre en tu teléfono. Solo sale de él lo necesario para la función que tú pides: el texto de tus preguntas y órdenes a la IA, y únicamente cuando lo pides expresamente, la imagen de tu pantalla («qué ves»), el texto de un correo o mensaje que quieres resumir o responder, o tus notas al buscarlas por significado. Si usas la voz, el audio lo procesa el reconocimiento de voz de Google.</p>
+<p><strong>En resumen:</strong> Robot-X no te pide crear una cuenta, no muestra anuncios, no incluye herramientas de publicidad ni de analítica propias y no vende ni comparte tus datos. El único componente que envía métricas técnicas de uso es ML Kit de Google (ver la sección 5). Casi todo ocurre en tu teléfono. Solo sale de él lo necesario para la función que tú pides: el texto de tus preguntas y órdenes a la IA, y únicamente cuando lo pides expresamente, la imagen de tu pantalla («qué ves»), el texto de un correo o mensaje que quieres resumir o responder, o tus notas al buscarlas por significado. Si usas la voz, el audio lo procesa el reconocimiento de voz de Google.</p>
 
 <h2>1. Quién es el responsable</h2>
 <p>El responsable del tratamiento es <strong>Kleider Anthony Cerron Soto</strong>. Puedes escribirnos a <a href="mailto:cerronsotokleideranthony@gmail.com">cerronsotokleideranthony@gmail.com</a>.</p>
@@ -96,9 +96,14 @@
     <td>No. Robot-X guarda en el teléfono qué tipo de función usaste y cuándo (por ejemplo «clima» a las 7:00), sin el contenido de lo que dijiste, hasta los últimos 1500 usos.</td>
   </tr>
   <tr>
+    <td><strong>Último comando</strong></td>
+    <td>Mostrarte en Inicio lo último que le pediste a Robot-X.</td>
+    <td>No. Se guarda en el teléfono solo la última frase (hasta 200 caracteres) y la hora; cada orden nueva reemplaza a la anterior.</td>
+  </tr>
+  <tr>
     <td><strong>Capturas y grabaciones de pantalla</strong></td>
     <td>Guardar una imagen o un video de tu pantalla cuando tú lo pides.</td>
-    <td>No. Se guardan en tu galería (<code>Pictures/ROBO-X</code> y <code>Movies/ROBO-X</code>) y nunca se suben a internet.</td>
+    <td>No. Se guardan en tu galería (<code>Pictures/ROBO-X</code> y <code>Movies/ROBO-X</code>; las capturas hechas con el servicio de accesibilidad, en la carpeta de capturas del sistema) y nunca se suben a internet.</td>
   </tr>
   <tr>
     <td><strong>Copia de seguridad en Descargas</strong></td>
@@ -175,11 +180,12 @@
 <p><strong>Servicios de la API de YouTube.</strong> Para encontrar el video o la canción que pides, Robot-X usa los servicios de la API de YouTube: la app envía el texto de la búsqueda a nuestro servidor y este lo consulta en YouTube y devuelve solo el primer resultado, que la app abre en la app de YouTube o de YouTube Music. Al usar esta función aceptas los <a href="https://www.youtube.com/t/terms">Términos de servicio de YouTube</a>, y Google trata la búsqueda según la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>. Nuestro servidor no guarda tus búsquedas. Si no quieres usar esta función, no pidas videos ni canciones por voz: el resto de Robot-X funciona igual.</p>
 <p>Cloudflare recibe tus peticiones como proveedor de alojamiento y puede registrar datos técnicos de red (como la dirección IP) con fines de seguridad y funcionamiento, según su <a href="https://www.cloudflare.com/privacypolicy/">política de privacidad</a>. Robot-X usa tu dirección IP solo para limitar el número de peticiones por minuto y no la almacena.</p>
 <p><strong>Límites diarios.</strong> Para no superar los límites gratuitos de los servicios que usa, el servidor de Robot-X lleva la cuenta de cuántas peticiones se hacen <strong>en total</strong> cada día entre todas las personas (preguntas a la IA, búsquedas de YouTube y caracteres de voz; por ejemplo, «412 preguntas el 18 de noviembre»). Esa cuenta se guarda en una base de datos de Cloudflare (D1) y en su almacenamiento de respaldo, y <strong>solo contiene números por día</strong>: no incluye quién hizo la petición, ni su contenido, ni la dirección IP, ni ningún identificador tuyo o de tu teléfono. Se borra a los 2 días. Si un día se alcanza el límite, esa función del servidor deja de responder hasta el día siguiente y el resto de Robot-X sigue funcionando.</p>
-<p>Además, la app depende de servicios de tu teléfono con sus propias políticas: el reconocimiento de voz de Google, el motor de texto a voz de Android y ML Kit de Google (reconocimiento de texto dentro del teléfono).</p>
-<p>Robot-X no incluye SDK de publicidad ni de analítica de terceros, y no vende tus datos ni los comparte con anunciantes.</p>
+<p>Además, la app depende de servicios de tu teléfono con sus propias políticas: el reconocimiento de voz de Google y el motor de texto a voz de Android.</p>
+<p><strong>ML Kit de Google.</strong> Robot-X incluye ML Kit para reconocer, dentro del teléfono, el texto de la pantalla en «lee esto» y «traduce esto». Según la documentación de Google, ML Kit envía a Google por HTTPS datos técnicos de diagnóstico y uso: el fabricante y modelo del teléfono, la versión de Android, el nombre y la versión de la app, un identificador por instalación y métricas de rendimiento y de uso de la función (por ejemplo, tamaños de entrada y salida y códigos de error). Google indica que los usa para diagnóstico y analítica de uso y que no los transfiere a terceros. Entre esos datos no figuran las imágenes de tu pantalla ni el texto reconocido. Google los trata según su <a href="https://policies.google.com/privacy">Política de privacidad</a>.</p>
+<p>Robot-X no incluye SDK de publicidad ni de analítica propios, y no vende tus datos ni los comparte con anunciantes.</p>
 
 <h2>6. Copias de seguridad</h2>
-<p><strong>Copia de Google.</strong> Tus notas (su texto), horario, gastos, exámenes, tareas, cursos, costumbres de uso y ajustes pueden incluirse en la copia de seguridad de Google de tu dispositivo, si la tienes activada, y transferirse a un teléfono nuevo. Esa copia la gestiona Google, no Robot-X. Tu clave de ElevenLabs no se puede usar en otro teléfono (su cifrado depende de este dispositivo) y tendrás que ponerla de nuevo. Las fotos y videos de las notas no se respaldan.</p>
+<p><strong>Copia de Google.</strong> Tus notas (su texto), horario, gastos, exámenes, tareas, cursos, costumbres de uso, ajustes, tu último comando y la última ubicación aproximada guardada para el clima pueden incluirse en la copia de seguridad de Google de tu dispositivo, si la tienes activada, y transferirse a un teléfono nuevo. Esa copia la gestiona Google, no Robot-X. Tu clave de ElevenLabs no se puede usar en otro teléfono (su cifrado depende de este dispositivo) y tendrás que ponerla de nuevo. Las fotos y videos de las notas no se respaldan.</p>
 <p><strong>Copia en Descargas.</strong> Si usas <em>Más › Copia de seguridad</em>, el archivo queda en la carpeta Descargas de tu teléfono como se explica en la sección 2. Robot-X no lo sube a ningún sitio.</p>
 
 <h2>7. Conservación y tus derechos</h2>
